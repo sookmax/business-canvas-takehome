@@ -1,0 +1,142 @@
+body,
+h1 {
+  margin: 0;
+}
+
+:root {
+  --custom-input-hover-border-color: #4a7cfe;
+  --custom-input-active-shadow: 0px 0px 0px 2px #4a7cfe26;
+  --custom-select-hover-border-color: #739fff;
+  --custom-layout-border-color: #f0f0f0;
+}
+
+.antd {
+  --ant-border-radius: 8px;
+  --ant-color-primary: #4a7cfe;
+  --ant-color-primary-hover: #739fff;
+  --ant-color-primary-active: #345dd9;
+  --ant-font-size-heading-1: 16px;
+}
+
+.antd.ant-btn {
+  --ant-margin-xs: 8px;
+  --ant-button-padding-inline: 12px;
+  --ant-button-border-color-disabled: #e3e3e3;
+  --ant-button-text-hover-bg: #0000000f;
+  --ant-color-bg-text-active: var(--ant-button-text-hover-bg);
+}
+
+.antd.ant-btn.ant-btn-text:disabled {
+  background-color: var(--ant-button-text-hover-bg);
+  color: var(--ant-button-text-text-color);
+}
+
+.antd.ant-input-css-var {
+  --ant-color-border: #e3e3e3;
+  --ant-input-padding-inline: 12px;
+  --ant-input-hover-border-color: var(--custom-input-hover-border-color);
+  --ant-input-active-border-color: var(--custom-input-hover-border-color);
+  --ant-input-active-shadow: var(--custom-input-active-shadow);
+}
+
+.antd.ant-picker-css-var {
+  --ant-date-picker-hover-border-color: var(--custom-input-hover-border-color);
+  --ant-date-picker-active-border-color: var(--custom-input-hover-border-color);
+  --ant-date-picker-active-shadow: var(--custom-input-active-shadow);
+}
+
+.antd.ant-picker-css-var {
+  --ant-border-radius-sm: 8px;
+}
+
+.antd.ant-select.ant-select-css-var {
+  --ant-color-text-quaternary: var(--ant-color-text);
+  --ant-color-text-placeholder: var(--ant-color-text);
+}
+
+.antd.ant-select.ant-select-css-var:hover:not(.ant-select-open) {
+  --ant-select-hover-border-color: var(--custom-select-hover-border-color);
+  --ant-color-text: var(--custom-select-hover-border-color);
+}
+
+.antd.ant-select-dropdown.ant-select-css-var {
+  --ant-select-option-selected-font-weight: normal;
+  --ant-select-option-selected-bg: #f0f7ff;
+  --ant-select-option-selected-color: var(--ant-color-primary);
+}
+
+.antd.ant-checkbox-css-var {
+  --ant-border-radius-sm: 6px;
+}
+
+.antd.ant-form-css-var {
+  --ant-form-label-required-mark-color: #ff4d4f;
+  --ant-form-label-color: #00000073;
+  --ant-form-label-font-size: 16px;
+  --ant-form-item-margin-bottom: 20px;
+}
+
+.antd.ant-form-css-var .ant-form-item .ant-form-item-label > label {
+  font-weight: var(--ant-font-weight-strong);
+}
+
+.antd.ant-form-css-var .ant-form-item:last-child {
+  margin-bottom: 0px;
+}
+
+.antd.ant-layout {
+  --ant-layout-header-bg: var(--ant-color-bg-base);
+  --ant-layout-body-bg: var(--ant-color-bg-base);
+  --ant-layout-header-height: auto;
+  --ant-layout-header-padding: 12px 16px;
+  --ant-layout-footer-padding: var(--ant-layout-header-padding);
+  --ant-layout-footer-bg: #00000005;
+}
+
+.antd.ant-modal-css-var {
+  --ant-modal-title-font-size: 14px;
+  --ant-border-radius-lg: 10px;
+  --ant-modal-content-padding: 0px;
+  --ant-modal-header-padding: 12px 16px;
+  --ant-modal-header-margin-bottom: 0px;
+  --ant-modal-header-border-bottom: 1px solid var(--custom-layout-border-color);
+  --ant-modal-body-padding: 18px 24px;
+  --ant-modal-footer-margin-top: 0px;
+  --ant-modal-footer-padding: var(--ant-modal-header-padding);
+  --ant-modal-footer-bg: #00000005;
+  --ant-modal-footer-border-top: var(--ant-modal-header-border-bottom);
+}
+
+.antd.ant-modal-css-var .ant-modal .ant-modal-close {
+  top: 8px;
+  right: 8px;
+}
+
+.antd.ant-modal-css-var .ant-modal .ant-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.antd.ant-table-css-var {
+  --ant-table-cell-padding-block: 10px;
+}
+
+.antd.ant-table-css-var.ant-table-wrapper {
+  border-top: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-table-border-color);
+  border-left: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-table-border-color);
+  border-right: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-table-border-color);
+  border-radius: var(--ant-table-header-border-radius);
+  overflow: hidden;
+}
+
+.ant-table-wrapper table tr td.ant-table-selection-column {
+  border-right: var(--ant-line-width) var(--ant-line-type)
+    var(--ant-table-border-color);
+}
+
+.antd.ant-typography {
+  --ant-typography-title-margin-bottom: 0px;
+}
