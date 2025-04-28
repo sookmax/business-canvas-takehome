@@ -3,9 +3,21 @@ import { RecordFormModal } from "./components/RecordFormModal";
 import { RecordTable } from "./components/RecordTable";
 import { AppHeader } from "./components/AppHeader";
 import React, { useEffect } from "react";
-import { useAppState } from "./store";
+import { AppContextProvider, useAppState } from "./store";
+import { ConfigProvider } from "antd";
+import { GLOBAL_THEME } from "./const";
 
 export function App() {
+  return (
+    <ConfigProvider theme={GLOBAL_THEME}>
+      <AppContextProvider>
+        <AppImplWrapper />
+      </AppContextProvider>
+    </ConfigProvider>
+  );
+}
+
+function AppImplWrapper() {
   const { records } = useAppState();
 
   useEffect(() => {
@@ -16,10 +28,10 @@ export function App() {
     }
   }, [records]);
 
-  return <AppInner />;
+  return <AppImpl />;
 }
 
-const AppInner = React.memo(function AppInner() {
+const AppImpl = React.memo(function AppImpl() {
   return (
     <>
       <Layout>

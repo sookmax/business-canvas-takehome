@@ -188,6 +188,7 @@ const RecordFormModalInner = React.memo(function RecordFormModalInner({
             ]}
           >
             <DatePicker
+              showNow={false}
               placeholder="가입일을 선택 해주세요"
               style={{ width: 180 }}
             />

@@ -108,12 +108,12 @@ const RecordTableInner = React.memo(function RecordTableInner({
       filterDropdown: getCustomFilterDropdown(records, "email-subscription"),
       onFilter: (value, record) =>
         record["email-subscription"].startsWith(value as string),
-      render: (value) =>
-        value === "선택됨" ? (
-          <Checkbox checked={true} />
-        ) : (
-          <Checkbox checked={false} />
-        ),
+      render: (value) => (
+        <Checkbox
+          aria-label="email-subscription-checkbox"
+          checked={value === "선택됨" ? true : false}
+        />
+      ),
     },
     {
       render: (_cell, row) => {
